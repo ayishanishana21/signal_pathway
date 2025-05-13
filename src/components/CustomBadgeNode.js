@@ -1,12 +1,14 @@
+
+
 import React from 'react';
-import { Handle, Position } from 'reactflow';
+import { Handle } from 'reactflow';
 
 export default function CustomBadgeNode({ data }) {
   return (
     <div
       style={{
-        width: 40, // Match initialNodes
-        height: 24, // Match initialNodes
+        width: 40,
+        height: 24,
         background: 'yellow',
         color: 'black',
         border: '2px solid black',
@@ -20,17 +22,9 @@ export default function CustomBadgeNode({ data }) {
         boxSizing: 'border-box',
       }}
     >
-      <Handle
-        type="target"
-        position={Position.Top}
-        style={{ display: 'none' }}
-      />
+      <Handle type="target" position="top" style={{ display: 'none' }} />
       {data.label}
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        style={{ display: 'none' }}
-      />
+      <Handle type="source" position="bottom" style={{ display: 'none' }} />
     </div>
   );
 }
